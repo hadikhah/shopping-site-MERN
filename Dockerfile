@@ -1,4 +1,4 @@
-From node:18-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -8,7 +8,6 @@ RUN npm install
 
 COPY . .
 
-RUN ls
-# EXPOSE 14000
+EXPOSE $PORT
 
 CMD ["npm", "run", "dev"]
